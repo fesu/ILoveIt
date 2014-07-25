@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class fragment_home extends Fragment implements OnClickListener{
+public class fragment_home extends Fragment implements View.OnClickListener{
 
 	private ImageView ivprofile;
 	private TextView tvrank;
@@ -39,7 +39,15 @@ public class fragment_home extends Fragment implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		
-		tvrank.setText("2");
+		switch (v.getId()) {
+		case R.id.tv_rank:
+			tvrank.setText("Hi");
+			break;
+
+		default:
+			break;
+		}
+		
 		
 	}
 	

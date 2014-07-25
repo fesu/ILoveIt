@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="2"
+    android:background="#e5e5e5"
     tools:context="com.blackfoxmedia.iloveit.HomeActivity$PlaceholderFragment" >
     
     <RelativeLayout 
@@ -13,61 +14,96 @@
         android:layout_weight=".7"            
         android:background="@drawable/rainbownetworks430_blur" >
         
-        <ImageView 
+        
+       <!--  <ImageView 
             android:id="@+id/iv_profilepic"
             android:layout_height="100dp"
             android:layout_width="150dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/logo134" />
+            android:src="@drawable/logo134" /> -->
+            
+        <LinearLayout
+            android:id="@+id/ln_profilepic"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+             >
         
-        <TextView 
+            <com.blackfoxmedia.iloveit.RoundedImageView
+            android:id="@+id/iv_profilepic"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"            
+            android:src="@drawable/picnew" />
+        
+            
+        </LinearLayout>
+        
+        
+        
+        <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/ln_profilepic"
+        android:layout_centerInParent="true" >        
+        
+            <TextView 
             android:id="@+id/tv_age"
             android:layout_height="wrap_content"
-            android:layout_width="40dp"
-            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"            
             android:text="23"
             android:gravity="center"
-            android:textColor="@android:color/white"
-            android:layout_toLeftOf="@id/iv_profilepic"
-            android:layout_centerInParent="true" />
+            android:textColor="@android:color/white"            
+            android:layout_centerHorizontal="true" />
         
         
         <TextView 
             android:id="@+id/tv_gender"
             android:layout_height="wrap_content"            
-            android:layout_width="40dp"
+            android:layout_width="wrap_content"
             android:layout_marginRight="10dp"
             android:text="Male"
             android:gravity="center"
-            android:textColor="@android:color/white"
-            android:layout_toLeftOf="@id/iv_profilepic"
+            android:textColor="@android:color/white"            
             android:layout_below="@id/tv_age"
-            android:layout_centerInParent="true" />
-
+            android:layout_centerHorizontal="true" />
+            
+            
+        </RelativeLayout>
         
-        <TextView 
+        
+        <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/ln_profilepic"
+        android:layout_centerInParent="true" > 
+        	
+            <TextView 
             android:id="@+id/tv_rank_title"
             android:layout_height="wrap_content"
-            android:layout_width="40dp"
-            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"            
             android:text="Rank"
             android:gravity="center"
-            android:textColor="@android:color/white"
-            android:layout_toRightOf="@id/iv_profilepic"
-            android:layout_centerInParent="true" />
+            android:textColor="@android:color/white"            
+            android:layout_centerHorizontal="true" />
         
         
-        <TextView 
+        	<TextView 
             android:id="@+id/tv_rank"
             android:layout_height="wrap_content"            
-            android:layout_width="40dp"
+            android:layout_width="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="1"
             android:gravity="center"
-            android:textColor="@android:color/white"
-            android:layout_toRightOf="@id/iv_profilepic"
+            android:textColor="@android:color/white"            
             android:layout_below="@id/tv_rank_title"
-            android:layout_centerInParent="true" />
+            android:layout_centerHorizontal="true" />
+        
+            
+        </RelativeLayout>
+        
         
         
         <TextView 
@@ -78,7 +114,7 @@
             android:text="Username"
             android:gravity="center"
             android:textColor="@android:color/white"            
-            android:layout_below="@id/iv_profilepic"
+            android:layout_below="@id/ln_profilepic"
             android:layout_centerInParent="true" />
         
         <Button 
@@ -88,7 +124,7 @@
             android:text="Test"
             android:gravity="center"
             android:textColor="@android:color/white"            
-            android:layout_above="@id/iv_profilepic"
+            android:layout_above="@id/ln_profilepic"
             android:layout_centerInParent="true"
             android:background="#50000000"
             android:visibility="invisible" />
@@ -102,11 +138,13 @@
         android:layout_weight="1.3"
         >
         
-        <RelativeLayout 
+        <!-- Photos Layout Start -->
+        <RelativeLayout
+            android:id="@+id/rl_photos" 
            	android:layout_width="match_parent"
         	android:layout_height="wrap_content"        
         	android:layout_marginTop="20dp"
-        	android:background="@drawable/login_background"
+        	android:background="@drawable/google_card_background"
         	android:layout_marginLeft="5dp"
         	android:layout_marginRight="5dp" >
             
@@ -115,26 +153,101 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Photos "
+            android:textSize="15sp"
             android:layout_marginBottom="5dp" />
         
         	<TextView 
             android:id="@+id/tv_photo_count" 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="- Count"            
+            android:text="- Count"
+            android:textSize="15sp"           
             android:layout_toRightOf="@id/tv_photo_title" 
             android:layout_marginBottom="5dp" />
+        	
+        	<View 
+        	    android:layout_width="match_parent"
+        	    android:layout_height="1.5dp"
+        	    android:layout_below="@id/tv_photo_title"
+        	    android:background="#3f51b5" />
         	
         	<GridView
         	    android:id="@+id/gv_photos"
         	    android:layout_width="match_parent"
-        	    android:layout_height="100dp"
-        	    android:background="@drawable/login_background"
+        	    android:layout_height="100dp"        	    
         	    android:layout_below="@id/tv_photo_title" >
         	    
         	</GridView>
             
-        </RelativeLayout>
+        </RelativeLayout> <!-- Photos Layout End -->
+
+        
+        <!-- About Me Layout Start -->
+        <RelativeLayout 
+           	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" 
+        	android:layout_below="@id/rl_photos"       
+        	android:layout_marginTop="20dp"
+        	android:background="@drawable/google_card_background"
+        	android:layout_marginLeft="5dp"
+        	android:layout_marginRight="5dp" >
+        	
+            <RelativeLayout
+                android:id="@+id/rl_aboutme_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+            
+                
+                <TextView 
+            	android:id="@+id/tv_aboutme_title" 
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="About me"
+            	android:textSize="15sp"
+            	android:layout_marginBottom="5dp" />
+        
+                
+                <View 
+        	    android:layout_width="match_parent"
+        	    android:layout_height="1.5dp"
+        	    android:layout_below="@id/tv_aboutme_title"
+        	    android:background="#3f51b5" />
+        	        		
+        		<Button 
+        	    android:id="@+id/btn_edit"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:minHeight="0dp"
+        	    android:minWidth="0dp"
+        	    android:layout_alignParentRight="true"
+        	    android:textSize="15sp"        	    
+        	    android:text="Edit"
+        	    android:visibility="invisible"
+        	    android:background="@android:color/transparent" />
+        		
+        		<View 
+        	    android:layout_width="1.5dp"
+        	    android:layout_height="match_parent"        	    
+        	    android:background="#3f51b5"
+        	    android:layout_toLeftOf="@id/btn_edit"
+        	    android:visibility="invisible" />        
+                
+            </RelativeLayout>
+            
+            
+            
+            <TextView
+                android:id="@+id/edt_aboutme"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:enabled="true"
+                android:background="@android:color/transparent"
+                 />
+            
+        </RelativeLayout> <!-- About Me Layout End -->
+        
+        
         
         
         
