@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"   
+    
+    tools:context="com.blackfoxmedia.iloveit.LoginActivity"
+    android:weightSum="2"
+    android:orientation="vertical"    
+    
+     >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".7"
+        android:orientation="vertical"    
+        android:background="@drawable/rainbownetworks430_blur" >
+        
+        <Button android:id="@+id/btn_createaccount"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:gravity="fill_vertical"        		       		
+        		android:text="Create Account"        		
+        		android:textColor="@android:color/background_light"        		
+        		android:drawableLeft="@drawable/ic_action_new"
+        		android:drawablePadding="10dp"
+        		android:paddingLeft="10dip"
+        		android:background="@android:color/transparent"       		
+        		android:visibility="invisible" />
+        
+        <ImageView
+        android:id="@+id/imglogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="20dp"
+        android:contentDescription="img"
+        android:background="@drawable/round_test"
+        android:src="@drawable/logo134"
+        android:visibility="invisible" />           
+            
+            
+      
+        
+        
+    </LinearLayout>
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
+        android:orientation="vertical"
+        android:background="@android:color/background_light" >
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:background="@drawable/login_background"
+        	android:layout_marginTop="20dp"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp" >
+        	
+            <EditText
+                android:id="@+id/edt_email"
+                android:inputType="textEmailAddress" 
+                android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:hint="E-Mail"
+        		android:layout_marginTop="10dp"
+        		android:layout_marginBottom="10dp"
+        		android:paddingLeft="20dp"
+                android:drawableLeft="@drawable/ic_action_email"
+                android:drawablePadding="10dp"
+                android:background="@android:color/transparent" />
+            
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+            
+            <EditText
+                android:id="@+id/edt_password"
+                android:inputType="textPassword" 
+                android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_marginTop="10dp"
+        		android:layout_marginBottom="10dp"
+        		android:hint="Password"
+        		android:paddingLeft="20dp"
+                android:drawableLeft="@drawable/ic_action_secure"
+                android:drawablePadding="10dp"
+                android:background="@android:color/transparent" />
+            
+        </LinearLayout>
+        
+        <Button android:id="@+id/btn_login"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_gravity="center"        		       		
+        		android:text="Login"
+        		android:textSize="22sp"        		
+        		android:textColor="@android:color/background_light"       		
+        		android:background="#3f51b5"
+        		android:layout_marginTop="15dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp" />
+        
+        <Button android:id="@+id/btn_forgotpassword"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_gravity="center"        		       		
+        		android:text="FORGOT PASSWORD?"
+        		android:textSize="15sp"        		
+        		android:textColor="@android:color/darker_gray"       		
+        		android:background="@android:color/transparent"
+        		android:layout_marginTop="4dp"
+        		 />            
+       
+            
+            
+            <Button android:id="@+id/btn_loginwithgoogle"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_gravity="center"
+        		android:gravity="center"        		       		
+        		android:text="Login With Google"        		
+        		android:textSize="20sp"        		        		
+        		android:textColor="@android:color/background_light"       		
+        		android:background="@drawable/login_with_google_bg"
+        		android:drawableLeft="@drawable/google24_white"
+        		android:paddingLeft="10dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp"
+        		android:layout_marginBottom="10dp" />
+            
+            <Button android:id="@+id/btn_loginwithfb"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"        		
+        		android:layout_gravity="right"        		       		
+        		android:text="Login With Facebook"
+        		android:textSize="20sp"        		
+        		android:textColor="@android:color/background_light"       		
+        		android:background="@drawable/login_with_facebook_bg"        		
+        		android:gravity="center"
+        		android:drawableLeft="@drawable/facebook_new"
+        		android:paddingLeft="10dp"
+        		android:layout_marginLeft="10dp"
+        		android:layout_marginRight="10dp" />
+            
+            
+       
+        
+    </LinearLayout>
+
+</LinearLayout>
